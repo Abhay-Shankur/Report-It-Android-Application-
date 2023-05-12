@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841533841143",
+    "project_id": "crime-application-7e7be",
+    "storage_bucket": "crime-application-7e7be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841533841143:android:28942b58e859116e257df2",
+        "android_client_info": {
+          "package_name": "com.application.crimeapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841533841143-2rk6rqn8j7vqb45ntrt7er2vv3r89pk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4M7cpyuZmLIeNnHFPr4YFAHZNLWKLooo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841533841143-2rk6rqn8j7vqb45ntrt7er2vv3r89pk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
