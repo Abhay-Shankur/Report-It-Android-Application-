@@ -8,6 +8,9 @@ public class MissingPerson {
     String City;
     String BirthSpot;
 
+    public MissingPerson() {
+    }
+
     public MissingPerson(String image, String name, String contact, String city, String birthSpot) {
         Image = image;
         Name = name;

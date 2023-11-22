@@ -4,12 +4,15 @@ public class Crime {
 
 
     String location;
-    String Description;
+    String description;
     String image;
+
+    public Crime() {
+    }
 
     public Crime(String location, String description, String image) {
         this.location = location;
-        Description = description;
+        this.description = description;
         this.image = image;
     }
 
@@ -22,11 +25,11 @@ public class Crime {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getImage() {
