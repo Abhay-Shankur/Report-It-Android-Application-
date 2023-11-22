@@ -34,22 +34,22 @@
                 app:srcCompat="@drawable/crime1" />
 
             <TextView
+                android:id="@+id/textViewDecription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:text="BirthSpot"
+                app:layout_constraintBottom_toTopOf="@+id/textViewlocation"
+                app:layout_constraintStart_toStartOf="@+id/textViewlocation" />
+
+            <TextView
                 android:id="@+id/textViewlocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="City"
-                app:layout_constraintStart_toEndOf="@+id/imageViewCrime"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textViewDecription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="BirthSpot"
-                app:layout_constraintStart_toStartOf="@+id/textViewlocation"
-                app:layout_constraintTop_toBottomOf="@+id/textViewlocation" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCrime" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

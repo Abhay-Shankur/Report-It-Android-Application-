@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="15dp"
-    tools:context=".AddPersonActivity">
+    tools:context=".AddActivity">
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -79,7 +79,7 @@
         android:ems="10"
         android:inputType="text"
         android:paddingLeft="10dp"
-        android:text="BirthSpot"
+        android:hint="Describe Your Birthmark or BirthSpot."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

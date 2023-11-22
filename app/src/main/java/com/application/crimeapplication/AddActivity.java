@@ -113,7 +113,7 @@ public class AddActivity extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     // Display the image URL in a Toast message
                                     saveDetailsToFirestore(uri.toString());
-                                    Toast.makeText(AddActivity.this, "Image URL: " + uri.toString(), Toast.LENGTH_LONG).show();
+//                                    Toast.makeText(AddActivity.this, "Image URL: " + uri.toString(), Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -140,29 +140,12 @@ public class AddActivity extends AppCompatActivity {
             objc.setImage(imageUri.toString());
             objc.setLocation(binding.textInputLayoutCity.getEditText().getText().toString());
             objc.setDescription(binding.editTextBirthSpot.getText().toString());
-
         } else{
             objm.setImage(imageUri.toString());
             objm.setName(binding.textInputLayoutName.getEditText().getText().toString());
             objm.setContact(binding.textInputLayoutContact.getEditText().getText().toString());
             objm.setCity(binding.textInputLayoutCity.getEditText().getText().toString());
             objm.setBirthSpot(binding.editTextBirthSpot.getText().toString());
-
-            // Add the details to Firestore
-//            firestore.collection("Missing Persons")
-//                    .add(obj)
-//                    .addOnSuccessListener(new OnSuccessListener() {
-//                        @Override
-//                        public void onSuccess(Object o) {
-//                            Toast.makeText(AddActivity.this, "Details uploaded to Firestore", Toast.LENGTH_SHORT).show();
-//                        }
-//                    })
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Toast.makeText(AddActivity.this, "Failed to upload details to Firestore", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
         }
 
         // Add the details to Firestore
@@ -180,5 +163,6 @@ public class AddActivity extends AppCompatActivity {
                         Toast.makeText(AddActivity.this, "Failed to upload details to Firestore", Toast.LENGTH_SHORT).show();
                     }
                 });
+        finish();
     }
 }

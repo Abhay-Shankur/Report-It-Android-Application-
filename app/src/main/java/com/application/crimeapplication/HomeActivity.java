@@ -61,24 +61,6 @@ public class HomeActivity extends AppCompatActivity {
         personAdapter = new PersonAdapter(this, missingPersonList);
 
         binding.recyclerview.setAdapter(screenType.equals("ADDCRIME")?crimeAddapter:personAdapter);
-        // Fetch details from Firestore and display them
-//        fetchDetailsFromFirestore();
-//        FirebaseDatabase database = FirebaseDatabase.getInstance("https://crime-application-7e7be-default-rtdb.asia-southeast1.firebasedatabase.app");
-//        DatabaseReference myRef = database.getReference("Missing person");
-//
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                MissingPerson value = dataSnapshot.getValue(MissingPerson.class);
-//                Log.d("TAG", "Value is: " + value);
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError error) {
-//                Log.w("TAG", "Failed to read value.", error.toException());
-//            }
-//        });
 
         binding.floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,11 +112,11 @@ public class HomeActivity extends AppCompatActivity {
                                 missingPersonList.clear();
                                 for (QueryDocumentSnapshot document: task.getResult()){
                                     MissingPerson obj = new MissingPerson();
-                                    obj.setImage(document.getString("Image"));
-                                    obj.setName(document.getString("Name"));
-                                    obj.setContact(document.getString("Contact"));
-                                    obj.setCity(document.getString("City"));
-                                    obj.setBirthSpot(document.getString("BirthSpot"));
+                                    obj.setImage(document.getString("image"));
+                                    obj.setName(document.getString("name"));
+                                    obj.setContact(document.getString("contact"));
+                                    obj.setCity(document.getString("city"));
+                                    obj.setBirthSpot(document.getString("birthSpot"));
                                     // Create a Details object and add it to the list
                                     missingPersonList.add(obj);
                                 }
